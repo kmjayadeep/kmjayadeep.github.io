@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash
 
 ## Static site generator
 # Dependencies: lowdown
@@ -13,12 +13,16 @@ main() {
 	test -f "$f_file" && FOOTER=$(cat "$f_file") && export FOOTER
 	test -f "$h_file" && HEADER=$(cat "$h_file") && export HEADER
 
+  # Cleanup
+  rm posts/*
+
   files=`ls src/*.md`
   for f in $files
   do
-    basename $f | render_md_files_lowdown src dest
+    basename $f | render_md_files_lowdown src posts
   done
 
+  render_article_list "$files"
 
 }
 
@@ -67,5 +71,9 @@ render_html_file() {
 	}'
 }
 
+render_article_list() {
+	urls="$1"
+	echo ${urls}
+}
 
 main "$@"
