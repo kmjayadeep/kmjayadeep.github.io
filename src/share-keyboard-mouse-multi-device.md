@@ -1,7 +1,8 @@
 # Sharing Keyboard and Mouse across multiple devices
+<p class="date">May  5, 2022</p>
 
 My personal work setup consists of a Reddragon K552 mechanical keyboard,
-a Zebronics RGB Mouse and a 2K display. It ain't much, but I love
+a Zebronics RGB Mouse and a 2K display. It isn't much, but I love
 working with it.
 And that's why I want to reuse the same setup for my office work
 environment as well. I could buy the same components again and setup

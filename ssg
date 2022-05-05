@@ -71,9 +71,38 @@ render_html_file() {
 	}'
 }
 
-render_article_list() {
+get_articles() {
 	urls="$1"
-	echo ${urls}
+  sorted=""
+  for url in $urls; do
+    page_date=$(head -2 "$url" | tail -1)
+    page_date=$(echo "$page_date" | sed 's/<[^>]*>//g')
+    page_date=$(date -d "$page_date" +%s)
+    u="$page_date:$url"
+    sorted="$(echo -e "$sorted\n$u" | sort -r)"
+    # li="<li><a href=\"$u\">$head</a></li>"
+    # echo $li
+  done
+
+  for i in $sorted;do
+    url=$(echo $i | cut -d: -f2-)
+
+    page_title=$(head -n 1 "$url" | cut -c 3-)
+    page_date=$(head -2 "$url" | tail -1)
+    page_date=$(echo "$page_date" | sed 's/<[^>]*>//g')
+
+    base=$(basename $url)
+    post_url="/posts/${base/%\.md/\.html}"
+
+    echo "<li><a href=\"$post_url\">$page_title</a>$page_date</li>"
+  done
+}
+
+render_article_list() {
+  articles=$(get_articles "$1")
+  articles=$(echo $articles)
+
+  sed -i "s|<ul class=\"articles\">.*</ul>|<ul class=\"articles\">${articles}</ul>|g" "index.html"
 }
 
 main "$@"
