@@ -94,7 +94,7 @@ get_articles() {
     base=$(basename $url)
     post_url="/posts/${base/%\.md/\.html}"
 
-    echo "<li><a href=\"$post_url\">$page_title</a>$page_date</li>"
+    echo "<li><a href=\"$post_url\">$page_title</a><p class=\"date\">$page_date</p></li>"
   done
 }
 
