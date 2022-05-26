@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/93866eaaa9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Jayadeep's Blog</title>
+  </head>
+  <body class="light-mode">
+    <nav class="menu">
+      <div class="nav-left">
+        <ul>
+          <li>
+            <a href="/index.html"
+              ><img class="logo" src="favicon.png" alt="" /><span
+                class="sitename"
+                >Jayadeep's blog</span
+              ></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li style="padding: 9px">
+            <a
+              id="darkmodetoggle"
+              class="fas fa-moon"
+              onclick="switchTheme()"
+            ></a>
+          </li>
+          <li><a href="https://github.com/kmjayadeep">github</a></li>
+        </ul>
+      </div>
+    </nav>
+<h1 id="trying-out-always-free-arm-vms-in-oracle-cloud">Trying out always free ARM VMs in oracle cloud</h1>
+
+<p class="date">May 26, 2022</p>
+
+<p>I was looking for some cheap cloud providers to provision a simple vm
+instance. I just wanted to run wireguard and connect my home network to
+it so that I can access my homelab clusters and personal PC from public
+internet securely. Previously I used digitalocean and hetzner. They both
+are cheap, with just 5$ per month for a single core 1GB RAM machine.</p>
+
+<p>Recently I came across oracle cloud. Oracle provider few always free
+resources, which includes 4 ARM cpus with 24GB. Not many people are a
+fan of ARM machines, But it was perfect for my use case. Actually it is
+more than enough for me, and completely free for life!</p>
+
+<p>You can find more details here:
+<a href="https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm">https:&#47;&#47;docs.oracle.com&#47;en-us&#47;iaas&#47;Content&#47;FreeTier&#47;freetier_topic-Always_Free_Resources.htm</a></p>
+
+<p>Although the console is not as user friendly as compared to other cloud
+providers, I was able to set it up quickly. One thing which annoyed me
+the most is that you are not allowed to create resources in every
+region (for free users). You have to choose a home region and then it is
+not possible to change it. Then you are stuck with this region forever.
+So keep that in mind before creating an account.</p>
+
+<p>Regarding the VM, I have used Ubuntu 20.04 4ARM cpus and 24GB for my
+machine. It is also possible to create multiple machines as long as the
+total cpu and memory is under the free tier limit. Another thing I&#8217;ve
+noticed that, the network interface in the VM doesn&#8217;t show the public IP
+of the machine. I&#8217;m no network expert, but my guess is that there is
+some sort of NAT going on to this machine.</p>
+
+<p>Coming to wireguard, the setup was pretty straightforward. I used the
+script from <a href="https://github.com/angristan/wireguard-install">https:&#47;&#47;github.com&#47;angristan&#47;wireguard-install</a>  to install
+the server and setup the client configurations. I didn&#8217;t expect it work
+in the first try, as thought the script was meant for intel only. It
+worked anyway.
+But oracle decided to surprise me again. I was unable to connect to the
+wireguard server from my local machine. I tried editing the security
+groups, bound a new security group to the instance and still it didn&#8217;t
+work. After a bit of search, I found the answer here: <a href="https://stackoverflow.com/questions/54794217/opening-port-80-on-oracle-cloud-infrastructure-compute-node">https:&#47;&#47;stackoverflow.com&#47;questions&#47;54794217&#47;opening-port-80-on-oracle-cloud-infrastructure-compute-node</a>.
+There were some IPTables rules which blocked the ports to wireguard.
+Since I couldn&#8217;t make sense of the rules, I just dropped the whole set
+of rules and it worked.</p>
+<footer>
+	<p>Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></br>
+	Created with a <a href="https://github.com/kmjayadeep/kmjayadeep.github.io">slightly modified</a> version of <a href="https://www.romanzolotarev.com/ssg.html">ssg</a> by Roman Zolotarev</p>
+</footer>
+<script>
+// Get the theme toggle input
+const currentTheme = localStorage.getItem("theme");// If the current local storage item can be found
+
+// Function that will switch the theme based on the if the theme toggle is checked or not
+function switchTheme() {
+  if (document.documentElement.getAttribute("data-theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
+    // Set the user's theme preference to dark
+    localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    // Set the user's theme preference to light
+    localStorage.setItem("theme", "dark");
+  }
+}
+
+
+// Get the current theme from local storage
+if (currentTheme) {
+  // Set the body data-theme attribute to match the local storage item
+  document.documentElement.setAttribute("data-theme", currentTheme);// If the current theme is dark, check the theme toggle
+  if (currentTheme === "dark") {
+    themeToggle.click();
+  }
+}
+
+</script>
+
+</body>
+</html>
