@@ -40,4 +40,4 @@ groups, bound a new security group to the instance and still it didn't
 work. After a bit of search, I found the answer here: <https://stackoverflow.com/questions/54794217/opening-port-80-on-oracle-cloud-infrastructure-compute-node>.
 There were some IPTables rules which blocked the ports to wireguard.
 Since I couldn't make sense of the rules, I just dropped the whole set
-of rules and it worked.
+of rules and it worked..
