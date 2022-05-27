@@ -53,7 +53,7 @@ it so that I can access my homelab clusters and personal PC from public
 internet securely. Previously I used digitalocean and hetzner. They both
 are cheap, with just 5$ per month for a single core 1GB RAM machine.</p>
 
-<p>Recently I came across oracle cloud. Oracle provider few always free
+<p>Recently I came across oracle cloud. Oracle provides a few always free
 resources, which includes 4 ARM cpus with 24GB. Not many people are a
 fan of ARM machines, But it was perfect for my use case. Actually it is
 more than enough for me, and completely free for life!</p>
@@ -71,14 +71,14 @@ So keep that in mind before creating an account.</p>
 <p>Regarding the VM, I have used Ubuntu 20.04 4ARM cpus and 24GB for my
 machine. It is also possible to create multiple machines as long as the
 total cpu and memory is under the free tier limit. Another thing I&#8217;ve
-noticed that, the network interface in the VM doesn&#8217;t show the public IP
+noticed is that, the network interface in the VM doesn&#8217;t show the public IP
 of the machine. I&#8217;m no network expert, but my guess is that there is
 some sort of NAT going on to this machine.</p>
 
 <p>Coming to wireguard, the setup was pretty straightforward. I used the
 script from <a href="https://github.com/angristan/wireguard-install">https:&#47;&#47;github.com&#47;angristan&#47;wireguard-install</a>  to install
 the server and setup the client configurations. I didn&#8217;t expect it work
-in the first try, as thought the script was meant for intel only. It
+in the first try, as I thought the script was meant for intel only. It
 worked anyway.
 But oracle decided to surprise me again. I was unable to connect to the
 wireguard server from my local machine. I tried editing the security
