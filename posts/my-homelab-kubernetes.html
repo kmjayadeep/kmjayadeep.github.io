@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/93866eaaa9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Jayadeep's Blog</title>
+  </head>
+  <body class="light-mode">
+    <nav class="menu">
+      <div class="nav-left">
+        <ul>
+          <li>
+            <a href="/index.html"
+              ><img class="logo" src="favicon.png" alt="" /><span
+                class="sitename"
+                >Jayadeep's blog</span
+              ></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li style="padding: 9px">
+            <a
+              id="darkmodetoggle"
+              class="fas fa-moon"
+              onclick="switchTheme()"
+            ></a>
+          </li>
+          <li><a href="https://github.com/kmjayadeep">github</a></li>
+        </ul>
+      </div>
+    </nav>
+<h1 id="my-experiments-with-homelab-kubernetes-cluster">My experiments with Homelab Kubernetes cluster</h1>
+
+<p class="date">July 03, 2022</p>
+
+<p>Here I would like to share my experience building a simple homelab
+Kubernetes cluster on a cheap mini PC. I have learned a lot of things
+about networking, disaster recovery etc. Hopefully this will be useful
+for someone else with similar interests.</p>
+
+<p>My machine is an old Fujitzu 920, with i5 processor, 16gigs of ram and
+256GB SSD storage. Since I don&#8217;t have any actual workloads to run, this
+is more than enough for me. My aim is to learn some networking stuff
+and get more hands on experience with Kubernetes on-prem setup.</p>
+
+<h2 id="setting-up-the-os-and-networking">Setting up the OS and Networking</h2>
+
+<p>I chose <code>Ubuntu Server 22.04</code> as the base OS. This was a no brainer. Ubuntu server is stable, has good community support and is
+designed to be ran as a server OS. I thought of installing an Arch based
+distro like Manjaro since I&#8217;m a huge fan of Arch Linux. But I got lazy
+and went ahead with ubuntu anyway.</p>
+
+<p>Installation was easy. Just flash the iso to a USB drive, boot into it
+and use the installtion wizard. The setup wizard was intuitive to use. I
+had an ethernet adapter to connect to internet. I preferred ethernet
+cable rather than wifi, as it is much faster. But I couldn&#8217;t connect to
+ethernet during the setup. I needed a monitor to do the OS setup, but
+the router was far away from where the ethernet cable can reach. So, I
+had to use a wifi dongle during the installation. I have assigned a
+static IP from router to the wifi mac address and tested ssh conection
+from my main PC. Then I kept the wifi dongle plugged in, moved the server pc to near the router, plugged in ethernet cable and
+booted up. All good. I can ssh into the server.</p>
+
+<p>Next, I wanted to remove the wifi dongle and make sure it will connect
+to ethernet and always have the same IP on reboot. For this, I have used
+<code>netplan</code> <a href="https://netplan.io/">https:&#47;&#47;netplan.io&#47;</a>. The is how my netplan config looks
+like (I will talk about the ipv6 stuff later)</p>
+
+<p>&#47;etc&#47;netplan&#47;00-installer-config.yaml
+<code>
+network:
+    version: 2
+    ethernets:
+        enp0s25:
+            dhcp4: no
+            match:
+                macaddress: XX:XX:XX:XX:XX
+            mtu: 1500
+            set-name: enp0s25
+            dhcp6: no
+            addresses:
+                - XXXXXXX&#47;64
+                - XXXXX&#47;24
+            routes:
+                - to: XXXX::1
+                  scope: link
+                - to: default
+                  via: XXX::1
+                  on-link: true
+                - to: default
+                  via: XX
+            nameservers:
+                addresses:
+                    - 1.1.1.1
+                    - 8.8.8.8
+</code></p>
+
+<p>As you can see it disables <code>dhcp</code> and assigns static IPv4 and IPv4
+address to the ethernet interface. I did a quick test by rebooting the
+server and it looked good. Time to remove the dongle!</p>
+
+<h2 id="k3s---lightweight-kubernetes">K3s - Lightweight Kubernetes</h2>
+
+<p>I didn&#8217;t even have to think about this. I have used k3s before. It is
+lightweight Kubernetes distribution, which is very easy to setup and
+maintain. It just has a single binary and no dependencies. <a href="https://k3s.io/">https:&#47;&#47;k3s.io&#47;</a></p>
+
+<p>But there were a few configurations I needed to tweak in order to get it to
+work the way i wanted. Here is the command I used to set it up.</p>
+
+<pre><code>export INSTALL_K3S_VERSION=v1.23.5+k3s1
+export INSTALL_K3S_EXEC="server --disable traefik --disable servicelb --disable metrics-server --disable-cloud-controller \
+       --kube-proxy-arg proxy-mode=ipvs --cluster-cidr=10.63.0.0&#47;16,fd63::&#47;48 --service-cidr=10.90.0.0&#47;16,fd90::&#47;112 \
+       --disable-network-policy --flannel-backend=none --node-ip=XXXXX,XXXXXXXXXX --disable local-storage"
+wget https:&#47;&#47;get.k3s.io -O k3s.sh
+less k3s.sh
+bash k3s.sh
+</code></pre>
+
+<p>Here are the changes I did compared to default options. I will explain
+the reasoning behind them later. I didn&#8217;t come up with this
+configuration in the first try. I had to reinstall many many times to
+get it the right way. I have learned during a later stage that I needed
+ipv6 support in order to get public traffic. It forced me to re
+configure the network stack (hence the ipv6 config in netplan) and k3s
+config later. It is why I had to provide node-ip in ipv4 and ipv6 in the
+above config.</p>
+
+<p>Changes:</p>
+
+<ul>
+<li>Disabled traefik controller - I wanted to use nginx for this</li>
+<li>Disable metrics-server - I have installed and managed them through gitops later</li>
+<li>Disable servicelb - I prefer metallb as a loadbalancer</li>
+<li>Disable cloud-controller - Didn&#8217;t need it</li>
+<li>Set cluster and service cidr - This was needed for calico</li>
+<li>Disable network policy - I wasn&#8217;t plannign to use it</li>
+<li>Disable local-storage - I had to use a customized version of this due
+to a bug. More info later</li>
+<li>Disable flannel - I had to use calico as flannel wasn&#8217;t supporting
+ipv6 (as far as I know)</li>
+</ul>
+
+<p>Once the above command is ran, cluster was ready in a few seconds. Then
+it is just a matter of copying kubeconfig to my personal machine, so
+that I can continue using <code>kubectl</code> commands from there instead of
+sshing into the machine every time.</p>
+
+<p>in server
+<code>
+sudo cp &#47;etc&#47;rancher&#47;k3s&#47;k3s.yaml .
+sudo chown pluto:pluto k3s.yaml 
+</code>
+in local</p>
+
+<pre><code>scp pluto:&#47;home&#47;pluto&#47;k3s.yaml .
+</code></pre>
+
+<p>After copying the yaml file, I had to edit and adjust the server IP
+address. By default, it will be configured as <code>127.0.0.1</code>. I just
+replaced it with the server lan IP.</p>
+<footer>
+	<p>Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></br>
+	Created with a <a href="https://github.com/kmjayadeep/kmjayadeep.github.io">slightly modified</a> version of <a href="https://www.romanzolotarev.com/ssg.html">ssg</a> by Roman Zolotarev</p>
+</footer>
+<script>
+// Get the theme toggle input
+const currentTheme = localStorage.getItem("theme");// If the current local storage item can be found
+
+// Function that will switch the theme based on the if the theme toggle is checked or not
+function switchTheme() {
+  if (document.documentElement.getAttribute("data-theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
+    // Set the user's theme preference to dark
+    localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    // Set the user's theme preference to light
+    localStorage.setItem("theme", "dark");
+  }
+}
+
+
+// Get the current theme from local storage
+if (currentTheme) {
+  // Set the body data-theme attribute to match the local storage item
+  document.documentElement.setAttribute("data-theme", currentTheme);// If the current theme is dark, check the theme toggle
+  if (currentTheme === "dark") {
+    themeToggle.click();
+  }
+}
+
+</script>
+
+</body>
+</html>
