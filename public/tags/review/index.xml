@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Review on Jayadeep&#39;s blog</title>
+    <link>http://localhost:1313/tags/review/</link>
+    <description>Recent content in Review on Jayadeep&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <lastBuildDate>Thu, 26 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Always free ARM VMs in oracle cloud</title>
+      <link>http://localhost:1313/posts/2-oracle-always-free-vm/</link>
+      <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/2-oracle-always-free-vm/</guid>
+      <description>I was looking for some cheap cloud providers to provision a simple vm instance. I just wanted to run wireguard and connect my home network to it so that I can access my homelab clusters and personal PC from public internet securely. Previously I used digitalocean and hetzner. They both are cheap, with just 5$ per month for a single core 1GB RAM machine.&#xA;Recently I came across oracle cloud. Oracle provides a few always free resources, which includes 4 ARM cpus with 24GB.</description>
+    </item>
+  </channel>
+</rss>

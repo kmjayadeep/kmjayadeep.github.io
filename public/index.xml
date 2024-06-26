@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jayadeep&#39;s blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Jayadeep&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running Torrrent with VPN in a container</title>
+      <link>http://localhost:1313/posts/3-torrent-vpn-container/</link>
+      <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/3-torrent-vpn-container/</guid>
+      <description>Torrent is one of the fastest ways to share files across internet without having a central distribution point. But the major disadvantage of torrent is that it exposes the public IP of the users to everyone who has access to that torrent file. This is dangerous for a number of reasons. My concern is not about hackers or anything like that. I live in a country where torrent is &amp;ldquo;considered&amp;rdquo; to be illegal.</description>
+    </item>
+    <item>
+      <title>Always free ARM VMs in oracle cloud</title>
+      <link>http://localhost:1313/posts/2-oracle-always-free-vm/</link>
+      <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/2-oracle-always-free-vm/</guid>
+      <description>I was looking for some cheap cloud providers to provision a simple vm instance. I just wanted to run wireguard and connect my home network to it so that I can access my homelab clusters and personal PC from public internet securely. Previously I used digitalocean and hetzner. They both are cheap, with just 5$ per month for a single core 1GB RAM machine.&#xA;Recently I came across oracle cloud. Oracle provides a few always free resources, which includes 4 ARM cpus with 24GB.</description>
+    </item>
+    <item>
+      <title>Sharing Keyboard and Mouse across multiple devices</title>
+      <link>http://localhost:1313/posts/1-keyboard-mouse-share/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/1-keyboard-mouse-share/</guid>
+      <description>My personal work setup consists of a Reddragon K552 mechanical keyboard, a Zebronics RGB Mouse and a 2K display. It isn&amp;rsquo;t much, but I love working with it. And that&amp;rsquo;s why I want to reuse the same setup for my office work environment as well. I could buy the same components again and setup another desk, but I prefer a software based approach to tackle this challenge&#xA;Sharing Keyboard and Mouse using Barrier Initially I thought of buying a KVM switch.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/search/_index.es/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/search/_index.es/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/search/_index.fr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/search/_index.fr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/search/_index.hi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/search/_index.hi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/search/_index.jp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/search/_index.jp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/search/_index.pl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/search/_index.pl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/search/_index.ru/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/search/_index.ru/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/search/_index.zh-cn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/search/_index.zh-cn/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
