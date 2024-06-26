@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vpn on Jayadeep&#39;s blog</title>
+    <link>https://blog.jayadeep.me/tags/vpn/</link>
+    <description>Recent content in Vpn on Jayadeep&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.jayadeep.me/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running Torrrent with VPN in a container</title>
+      <link>https://blog.jayadeep.me/posts/3-torrent-vpn-container/</link>
+      <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://blog.jayadeep.me/posts/3-torrent-vpn-container/</guid>
+      <description>Torrent is one of the fastest ways to share files across internet without having a central distribution point. But the major disadvantage of torrent is that it exposes the public IP of the users to everyone who has access to that torrent file. This is dangerous for a number of reasons. My concern is not about hackers or anything like that. I live in a country where torrent is &amp;ldquo;considered&amp;rdquo; to be illegal.</description>
+    </item>
+  </channel>
+</rss>
