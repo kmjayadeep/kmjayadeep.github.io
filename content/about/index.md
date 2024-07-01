@@ -22,20 +22,57 @@ I'm setting up a NAS server for home usage. Here is my [blog post](/posts/4-my-b
 ##### Kubernetes
 I have a homelab kubernetes cluster where I host my apps and use as a playground. Find my FluxCD config in https://github.com/kmjayadeep/homelab-k8s
 
-## My tech Journey
+# My Tech Journey
 
-I started my tech journey at a young age of 12
+#### 2007
+- Got my first phone.
+- Started learning HTML and began exploring hacking.
 
-* In 2007 I got my first phone. I started learning HTML and started getting curious about Hacking.
-* In 2009 I became better in web design. Started my first blog about hacking tutorials
-* In 2011 I started my second blog, https://hackingpalace.net where I became more serious about hacking. In it's peak period it used to have 20K+ views per day.
-* In 2012 I leared about backend development, PHP, MySQL etc. I got my first cheque from Google Adsense for advertising in my blog.
-* In 2013 During my college studies, I got my first freelance project. I earned 5$ for about a week of hard work (and learning a lot).
-* In 2014 I learned Android app development. I took more freelance projects on web development, Apps development etc.
-* In 2015 I switched to Linux from linux (permanently!). I learned Node.Js, MongoDB, Angular etc. Took more freelance projects and gained a lot of experience. I started taking care of my expenses and tuition fees on my own.
-* In 2016 I started getting bigger clients and bigger projects. I even added a few friends from my college to the freelance projects. I learned about Docker and Docker Compose. Became proficient in Linux server administration. Bigger freelance projects included the responsibility of managing linux servers for the deployments as well.
-* In 2017 I did an intership at a startup named **Sensomate Systems** as a full stack engineer. Joined **SAP Labs** as a Backend Engineer (Java) in July. Then switched to full stack role in short time.
-* In 2018 I started a freelance work at Avesha Systems. Used to work 2-3 Hours per day in addition to my full time job at SAP. Learned more about Devops and Cloud.
-* In 2020 I switched to Avesha for full time. Became a Kubernetes Expert in short time. I designed the initial architecture for the opensource project https://kubeslice.io/
-* in 2021 I moved to Germany as a Site Reliablity Engineer at Commercetools.
-* Currently working as a Platform Engineer at SonarSource in Geneva, Switzerland
+#### 2009
+- Improved my web design skills.
+- Started my first blog focused on hacking tutorials.
+
+#### 2011
+- Launched my second blog, [Hacking Palace](https://hackingpalace.net), becoming more serious about hacking.
+- Achieved peak traffic of 20K+ views per day.
+
+#### 2012
+- Learned backend development, including PHP and MySQL.
+- Received my first cheque from Google Adsense for blog advertising.
+
+#### 2013
+- During college, completed my first freelance project, earning $5 for a week of work and valuable learning.
+
+#### 2014
+- Learned Android app development.
+- Took on more freelance projects in web and app development.
+
+#### 2015
+- Permanently switched to Linux.
+- Learned Node.js, MongoDB, Angular, and more.
+- Continued freelancing, gaining experience and supporting my expenses and tuition fees.
+
+#### 2016
+- Secured larger clients and projects.
+- Collaborated with college friends on freelance projects.
+- Learned Docker and Docker Compose.
+- Became proficient in Linux server administration and managed server deployments.
+
+#### 2017
+- Interned at **Sensomate Systems** as a Full Stack Engineer.
+- Joined **SAP Labs** as a Backend Engineer (Java) in July, quickly transitioning to a Full Stack role.
+
+#### 2018
+- Started freelancing for Avesha Systems, working 2-3 hours daily alongside my full-time job at SAP.
+- Expanded my knowledge in DevOps and Cloud.
+
+#### 2020
+- Switched to full-time at Avesha Systems.
+- Became a Kubernetes Expert.
+- Designed the initial architecture for the open-source project [KubeSlice](https://kubeslice.io/).
+
+#### 2021
+- Moved to Germany as a Site Reliability Engineer at Commercetools.
+
+## Present
+- Working as a Platform Engineer at SonarSource in Geneva, Switzerland.
