@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homelab NAS on Jayadeep KM</title>
+    <link>http://192.168.1.63:1313/series/homelab-nas/</link>
+    <description>Recent content in Homelab NAS on Jayadeep KM</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://192.168.1.63:1313/series/homelab-nas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Budget NAS setup</title>
+      <link>http://192.168.1.63:1313/posts/4-my-budget-nas-setup/</link>
+      <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://192.168.1.63:1313/posts/4-my-budget-nas-setup/</guid>
+      <description>Working on my budget NAS setup.</description>
+    </item>
+  </channel>
+</rss>

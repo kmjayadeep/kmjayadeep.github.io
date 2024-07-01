@@ -2,65 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.jayadeep.me/tags/articles/</loc>
+    <loc>http://192.168.1.63:1313/tags/articles/</loc>
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/tags/homelab/</loc>
+    <loc>http://192.168.1.63:1313/tags/homelab/</loc>
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/</loc>
+    <loc>http://192.168.1.63:1313/series/homelab-nas/</loc>
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/posts/</loc>
+    <loc>http://192.168.1.63:1313/</loc>
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/posts/3-torrent-vpn-container/</loc>
+    <loc>http://192.168.1.63:1313/posts/4-my-budget-nas-setup/</loc>
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/tags/</loc>
+    <loc>http://192.168.1.63:1313/posts/</loc>
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/tags/vpn/</loc>
+    <loc>http://192.168.1.63:1313/posts/3-torrent-vpn-container/</loc>
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/posts/2-oracle-always-free-vm/</loc>
+    <loc>http://192.168.1.63:1313/series/</loc>
+    <lastmod>2022-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.63:1313/tags/</loc>
+    <lastmod>2022-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.63:1313/tags/vpn/</loc>
+    <lastmod>2022-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.63:1313/posts/2-oracle-always-free-vm/</loc>
     <lastmod>2022-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/tags/cloud/</loc>
+    <loc>http://192.168.1.63:1313/tags/cloud/</loc>
     <lastmod>2022-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/tags/review/</loc>
+    <loc>http://192.168.1.63:1313/tags/review/</loc>
     <lastmod>2022-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/posts/1-keyboard-mouse-share/</loc>
+    <loc>http://192.168.1.63:1313/posts/1-keyboard-mouse-share/</loc>
     <lastmod>2022-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/search/</loc>
-    <priority>0.1</priority>
+    <loc>http://192.168.1.63:1313/about/</loc>
+    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.jayadeep.me/search/_index.es/</loc>
-    <priority>0.1</priority>
+    <loc>http://192.168.1.63:1313/authors/</loc>
   </url><url>
-    <loc>https://blog.jayadeep.me/search/_index.fr/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://blog.jayadeep.me/search/_index.hi/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://blog.jayadeep.me/search/_index.jp/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://blog.jayadeep.me/search/_index.pl/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://blog.jayadeep.me/search/_index.ru/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://blog.jayadeep.me/search/_index.zh-cn/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://blog.jayadeep.me/categories/</loc>
-  </url><url>
-    <loc>https://blog.jayadeep.me/series/</loc>
+    <loc>http://192.168.1.63:1313/categories/</loc>
   </url>
 </urlset>

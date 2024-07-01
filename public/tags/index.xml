@@ -1,48 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Jayadeep&#39;s blog</title>
-    <link>https://blog.jayadeep.me/tags/</link>
-    <description>Recent content in Tags on Jayadeep&#39;s blog</description>
+    <title>Tags on Jayadeep KM</title>
+    <link>http://192.168.1.63:1313/tags/</link>
+    <description>Recent content in Tags on Jayadeep KM</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <managingEditor>user@example.com (Hugo Author)</managingEditor>
-    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <language>en</language>
     <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.jayadeep.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://192.168.1.63:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Articles</title>
-      <link>https://blog.jayadeep.me/tags/articles/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://blog.jayadeep.me/tags/articles/</guid>
+      <link>http://192.168.1.63:1313/tags/articles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://192.168.1.63:1313/tags/articles/</guid>
       <description></description>
     </item>
     <item>
       <title>Homelab</title>
-      <link>https://blog.jayadeep.me/tags/homelab/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://blog.jayadeep.me/tags/homelab/</guid>
+      <link>http://192.168.1.63:1313/tags/homelab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://192.168.1.63:1313/tags/homelab/</guid>
       <description></description>
     </item>
     <item>
       <title>Vpn</title>
-      <link>https://blog.jayadeep.me/tags/vpn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://blog.jayadeep.me/tags/vpn/</guid>
+      <link>http://192.168.1.63:1313/tags/vpn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://192.168.1.63:1313/tags/vpn/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>https://blog.jayadeep.me/tags/cloud/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://blog.jayadeep.me/tags/cloud/</guid>
+      <link>http://192.168.1.63:1313/tags/cloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://192.168.1.63:1313/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Review</title>
-      <link>https://blog.jayadeep.me/tags/review/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://blog.jayadeep.me/tags/review/</guid>
+      <link>http://192.168.1.63:1313/tags/review/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://192.168.1.63:1313/tags/review/</guid>
       <description></description>
     </item>
   </channel>
