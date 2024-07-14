@@ -1,7 +1,7 @@
 +++
 title = "Always free ARM VMs in oracle cloud"
 description = "My review after trying the always free ARM VMs in Oracle Cloud"
-date = "2022-05-26"
+date = "2023-05-26"
 tags = ["review", "cloud", "articles"]
 author = "Jayadeep KM"
 toc = false

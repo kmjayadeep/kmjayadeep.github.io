@@ -1,7 +1,7 @@
 +++
 title = "Running Torrrent with VPN in a container"
 description = "Setup Deluge torrent client with VPN and a fail-safe kill-switch"
-date = "2022-05-30"
+date = "2023-05-30"
 tags = ["vpn", "homelab", "articles"]
 author = "Jayadeep KM"
 toc = false

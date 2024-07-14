@@ -1,7 +1,7 @@
 +++
 title = "Sharing Keyboard and Mouse across multiple devices"
 description = "Use a single mouse and keyboard across multiple machines, wirelessly"
-date = "2022-05-05"
+date = "2023-05-05"
 tags = ["articles"]
 author = "Jayadeep KM"
 toc = false

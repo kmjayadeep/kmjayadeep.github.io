@@ -1,7 +1,7 @@
 +++
 title = "My Budget 4TB NAS setup"
 description = "How I setup a high performing NAS server on a budget"
-date = "2022-05-30"
+date = "2024-05-30"
 tags = ["nas", "homelab", "articles"]
 author = "Jayadeep KM"
 toc = true
